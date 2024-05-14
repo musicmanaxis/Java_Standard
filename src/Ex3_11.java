@@ -8,7 +8,7 @@ public class Ex3_11 {
 		//소수 3째 자리 값을 구하기 
 		//Math.round()는 소수 첫째자리를 반올림해서 반환한다. 
 		System.out.println(shortPi);
-		//khkhk
+
 	    System.out.println((int)(pi*1000)/1000.0);
 	    //3.141 로 구하고 싶으면....
 	}
