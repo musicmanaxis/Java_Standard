@@ -6,7 +6,8 @@ import java.util.Map;
 
 public class Ex11_33 {
     public static void main(String[] args) {
-        String[] data={"A", "B", "K", "E","F", "F", "F", "C", "C", "C", "G", "G"};
+        String[] data={"A", "B", "B", "C", "C", "C", "D", "D", "D", "D", "E", "E"};
+
 
         HashMap map=new HashMap();
 
@@ -14,6 +15,7 @@ public class Ex11_33 {
             if(map.containsKey(data[i])) {   //data의 자료가 맵의 키값으로 사용(알파벳이 키값으로 사용), 1.같은 키값이 있다면..
                 Integer value = (Integer) map.get(data[i]);   //get(key값으로)->값반환  2.그 키의 값의 숫자를 가져온다.
                // System.out.println( "value.intValue()->"+new Integer(value.intValue())+1);
+                System.out.println(map.values()+":"+  map.get(data[i]));
                 map.put(data[i], new Integer(value.intValue())+1);  //3.깉은 키가 있으면 해당키의 값을 1을 더 증가시킨다.
 
 
