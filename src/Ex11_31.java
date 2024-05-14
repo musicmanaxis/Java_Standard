@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Ex11_31 {
@@ -15,15 +16,17 @@ public class Ex11_31 {
 
         while (it.hasNext()){
             Map.Entry e=(Map.Entry)it.next();   //포인트
+            //Map.Entry->map안에 entry내부클래스가 있음...그래서 이런식으로 표현
+            //entry는 내부클래스로 필드가...String key, int value ..아런식으로..되어 있음
             System.out.println("이름:"+e.getKey()+", 점수:"+e.getValue());
         }
 
-        set=map.keySet();
+        set=map.keySet();  //키값만 가져오기
         System.out.println("참가자 명단:"+set);
 
         Collection values=map.values();
         System.out.println("그냥 values값->"+map.values());
-        it=values.iterator();
+        it=values.iterator();   //값을 하나하나 처리하기 위해 이터레이터 반환
 
         int total=0;
 
@@ -35,5 +38,6 @@ public class Ex11_31 {
         System.out.println("평균은 "+(float)total/map.size());
         System.out.println("최고점수는 "+Collections.max(values));
         System.out.println("최저점수는 "+Collections.min(values));
+
     }
 }
