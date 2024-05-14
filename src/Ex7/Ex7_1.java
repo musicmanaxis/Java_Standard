@@ -1,4 +1,4 @@
-
+package Ex7;
 //상속관계 공부  
 
 class Tv{

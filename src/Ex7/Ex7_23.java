@@ -1,3 +1,5 @@
+package Ex7;
+
 import java.text.DecimalFormat;
 import java.util.Vector;
 
