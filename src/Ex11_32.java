@@ -24,7 +24,7 @@ public class Ex11_32 {
     static void addPhoneNo(String groupName, String name, String tel){
         addGroup(groupName);  //그룹이름으로 해당 그룹이 없다면 내부적으로 HashMap생성
         HashMap group=(HashMap)phoneBook.get(groupName);  //get(key값)로 값을 object형태로 반환받음
-        //그룹이름으로 값인 HashMap을 가져와서   맡애초롬 번호와 이름을 HashMap형태로 저장.
+        //그룹이름으로 값인 HashMap을 가져와서   아래와 같이 번호와 이름을 HashMap형태로 저장.
         group.put(tel, name);
     }
 
@@ -43,7 +43,7 @@ public class Ex11_32 {
         Iterator it=set.iterator();
         while(it.hasNext()){
            Map.Entry e= (Map.Entry)it.next();
-           Set subSet=((HashMap)e.getValue()).entrySet();
+           Set subSet=((HashMap)e.getValue()).entrySet();   //값에 HashMap이 또 들어잇어서..getValue()
            Iterator subIt=subSet.iterator();
 
            System.out.println("* "+e.getKey()+"["+subSet.size()+"]");
