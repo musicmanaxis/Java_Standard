@@ -34,6 +34,7 @@ public class Ex11_33 {
         while (it.hasNext()){
             Map.Entry e=(Map.Entry)it.next();  //키와 값으로 이루어진 엔트리를 구하고
             int value=((Integer)e.getValue()).intValue();  //그 엔트리에서 값(숫자)을 가져온다.
+          //  int value1=(int)e.getValue();   //이렇게 해도 된다.
             System.out.println(e.getKey()+":"+printBar('#', value)+" "+value);
         }
 
