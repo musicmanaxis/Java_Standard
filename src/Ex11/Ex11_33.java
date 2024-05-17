@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Ex11_33 {
     public static void main(String[] args) {
-        String[] data={"A", "B", "B", "C", "C", "C", "D", "D", "D", "D", "E", "E"};
+        String[] data={"E","C", "C", "C","A", "B", "B", "D", "D", "D", "D", "E" };
 
 
         HashMap map=new HashMap();
