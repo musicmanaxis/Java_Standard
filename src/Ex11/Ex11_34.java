@@ -24,7 +24,7 @@ public class Ex11_34 {
         //하나하나 데이터 조작을 위해선 Iterator가 필요하고 map에서는 Iterator를 생성할수 없어서 Set으로 변환한 다음
         //Iteraror를 얻어내고, 읽어온것을 다시 Map.Entry(키와 값)으로 변환하여 사용한다.
 
-        Iterator it=tmp.entrySet().iterator();
+        Iterator it=tmp.entrySet().iterator();  //tmp.entrySet()->맵을 Set으로 변환
 
         while(it.hasNext()){
            Map.Entry me=(Map.Entry) it.next();
@@ -33,9 +33,9 @@ public class Ex11_34 {
            System.out.println(me.getKey()+":"+printBar('#', b)+"->"+b);
         }
 
-        Set set=tmp.entrySet();
 
         System.out.println("데이터 내림차순으로 정렬후");
+        Set set=tmp.entrySet();
         List arrayList=new ArrayList(set);   //정렬을 위해 ArrayList사용
         Collections.sort(arrayList, new ValueComparator());  //sort(정렬대상, 정렬기준)
 
