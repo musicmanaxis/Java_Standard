@@ -1,3 +1,5 @@
+package Ex12;
+
 import java.util.ArrayList;
 
 class Fruit{
