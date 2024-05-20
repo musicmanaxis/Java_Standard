@@ -26,12 +26,14 @@ class Juice{
 }
 
 class JuiceMaker{
-    String tmp="";
-    static Juice makeJuice(FruitBox2<?extends Fruit2> box){
-        for(FruitBox2 f:box.getList()) {
+
+    static Juice makeJuice(FruitBox2<? extends Fruit2> box){
+        String tmp="";
+        for(Fruit2 f:box.getList()) {
             tmp+=""+f;
-            return new Juice(tmp);
+
         }
+        return new Juice(tmp);
     }
 }
 
@@ -39,6 +41,8 @@ public class Ex12_3 {
     public static void main(String[] args) {
 
         FruitBox2<Fruit> fruitBox2=new FruitBox2<>();
-        fruitBox2.add(new Fruit());
+        fruitBox2.add(new Fruit2());
+       // JuiceMaker.makeJuice(fruitBox2);
+        System.out.println(fruitBox2);
     }
 }
