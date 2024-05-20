@@ -5,10 +5,10 @@ import java.util.ArrayList;
 class Fruit{
 	public String toString(){return "Fruit입니다.";}
 }
-class Apple1 extends Fruit{
+class Apple extends Fruit{
 	public String toString(){return "Apple입니다";}
 }
-class Grape1 extends Fruit{
+class Grape extends Fruit{
 	public String toString(){return "Grape입니다";}
 }
 class Toy{
@@ -20,10 +20,10 @@ public class Ex12_1{
 	public static void main(String[] args) {
 		Box<Fruit> fruitBox=new Box<Fruit>();
 		Box<Apple1> appleBox=new Box<>();
-		Box<Grape1> grapeBox=new Box<>();
+		Box<Grape> grapeBox=new Box<>();
 
-		fruitBox.add(new Apple1());
-		fruitBox.add(new Grape1());
+		fruitBox.add(new Apple());
+		fruitBox.add(new Grape());
 
 		appleBox.add(new Apple1());
 		appleBox.add(new Apple1());
