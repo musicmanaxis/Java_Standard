@@ -40,7 +40,7 @@ class Box2<T>{
 
 public class Ex12_3 {
     public static void main(String[] args) {
-        FruitBox2<Fruit2> fruitBox2=new FruitBox2<>();
+        FruitBox2<Fruit2> fruitBox2=new FruitBox2<Fruit2>();
         JuiceMaker.makeJuice(fruitBox2);
 
     }
