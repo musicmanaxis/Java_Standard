@@ -1,3 +1,5 @@
+package Ex2;
+
 public class Ex2_12 {
 	//형변환..아래것은 외우던지 찾아 쓸 수 있게 하자
 	//testtset
