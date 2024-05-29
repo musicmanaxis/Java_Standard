@@ -55,13 +55,15 @@ class Buyer2{
 			String item="";
 
 			for(int i=0; i<v.size() ;i++) {
-				Product2 p=(Product2)v.get(i);
+				Product2 p=(Product2)v.get(i);    //형변환
 				if(p==null) break;
 				sum += p.price; //합계 내기  
 				item += (i==0)?""+p:", "+p;  //장바구니 목록보기..
 			}
 			DecimalFormat df=new DecimalFormat("###,###");
 			String total=df.format(sum);
+
+			String money=df.format(this.money);
 		
 		System.out.println("총구매액:"+total+"만원, 남은 금액:"+money+"만원, 포인트:"+bonusPoint);
 		System.out.println("장바구니 목록:["+item+"]");
