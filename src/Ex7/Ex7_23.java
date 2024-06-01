@@ -50,7 +50,8 @@ class Buyer2{
 			bonusPoint+=p.bonusPoint;
 		}
 	
-		void summary() {   // 자기가 산 물건 목록보기  
+		void summary() {
+			// 자기가 산 물건 목록보기
 			int sum=0;
 			String item="";
 
