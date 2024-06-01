@@ -41,7 +41,7 @@ public class Ex12_3 {
     public static void main(String[] args) {
 
         FruitBox2<Fruit> fruitBox2=new FruitBox2<>();
-   //     fruitBox2.add(new Fruit2());
+       // fruitBox2.add(new Fruit2());
        // JuiceMaker.makeJuice(fruitBox2);
         System.out.println(fruitBox2);
     }
