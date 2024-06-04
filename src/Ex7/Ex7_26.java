@@ -44,7 +44,7 @@ class Tank extends GroundUnit implements Repairable{
         hitPoint=HP_MAX;
     }
 
-    public  String toString(){return  "Tank";}
+    public  String toString(){return "Tank";}
 }
 
 class Marine extends GroundUnit{    //마린은 고칠수 있는 대상에서 제외시켜서 Repairable 인터페이스를 implement 않도록 했다.
