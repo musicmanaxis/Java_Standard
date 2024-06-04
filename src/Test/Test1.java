@@ -6,26 +6,44 @@ package Test;
 
 
 public class Test1 extends B{
+    int a;
+    String s;
+    Test1(){
+        s=super.s;
+    }
 
     public static void main(String[] args) {
         Test1 t1=new Test1();
         t1.A_method();  //A클래스 메서드
         System.out.println(t1);  //B클래스 toString()사용
 
+         System.out.println(new Test1().s);
+
+         t1.B_method();
+        // System.out.println(new Test1().s);
+
     }
 }
 
 class A{
+    int a;
+    String s="A class String Memeber";
      void A_method(){
         System.out.println("Class A Method");
+
     }
 
 
 }
 
 class B extends A{
+    int b;
+    String s="B class String Memeber";
+
     void B_method(){
         System.out.println("Class B Method");
+        s=new A().s;
+        System.out.println(s);
     }
 
 
