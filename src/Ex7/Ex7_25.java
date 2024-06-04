@@ -7,7 +7,7 @@ interface Parsable{
 
 class ParseManager{
     public static Parsable getParser(String fileName){  //리턴타입이 Parsable에 주목
-        if(fileName.equals("XML")){
+        if(fileName.equals("XML")){   //스트링의 equals()는 내용비교, 오브젝트의 equals()는 주소값비교
             return new XMLParser();    //Parsable을 구현한 클래스의 객체를 반환
         }else if(fileName.equals("HTML")){
             return new HTMLParser();   //Parsable을 구현한 클래스의 객체를 반환
@@ -24,13 +24,13 @@ class ParseManager{
 
 class XMLParser implements Parsable{
     public void parse(String fileName){        ////Parsable인터페이스 메서드 구현
-        System.out.println(fileName+"Parse is Running");
+        System.out.println(fileName+" Parse is Running");
     }
 }
 
 class HTMLParser implements Parsable{
     public void parse(String fileName){
-        System.out.println(fileName+"Parse is Running");
+        System.out.println(fileName+" Parse is Running");
     }
 }
 
