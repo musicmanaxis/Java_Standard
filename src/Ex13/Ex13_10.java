@@ -10,13 +10,13 @@ public class Ex13_10 implements Runnable{
         Thread th=new Thread(new Ex13_10());  //인터페이스를 이용하여 스레드를 생성하고
         th.setDaemon(true);  //이스레드를 데몬 스레드로 지정한다.
         th.start();          //그리고 나서 데몬스레드를 시작한다.
-        for(int i=1;i<=10;i++) {
+        for(int i=1;i<=15;i++) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException ex) { }
 
             System.out.println(i);
-            if(i==5)
+            if(i==3)
                 autoSave=true;
         }
         System.out.println("프로그램이 종료되었습니다.");
@@ -24,12 +24,14 @@ public class Ex13_10 implements Runnable{
     }
 
     public void run() {
-        while (true) {   //데몬스레드는 주로 무한루프와 if문을 이용해서 조건이 만족되면 실행되는걸로 처리한다.
+        //데몬스레드는 주로 무한루프와 if문을 이용해서 조건이 만족되면 실행되는걸로 처리한다.
+        while (true) {
+
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException ex) {  }
 
-            if(autoSave) autoSave();
+            if(autoSave) autoSave();   //if(autoSave) ->autoSave가 true라면 이라는 같은 뜻
         }
     }
 
