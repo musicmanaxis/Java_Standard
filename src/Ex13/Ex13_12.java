@@ -15,7 +15,7 @@ public class Ex13_12 {
         try {
             System.out.println("&&& Main Thread Sleep Start &&&");
             th2.sleep(3000);
-            //이렇게 적으면 th2가 sleep이 아니라 메인메서드가 sleep상태이다. 저렇게 적어도 th2가 슬립이 안된다.
+            //이렇게 적으면 th2가 sleep이 되는게 아니라 메인메서드가 sleep상태이다. 저렇게 적어도 th2가 슬립이 안된다.
             //sleep은 자기자신만 효과를 볼수 있다. Thread.sleep()로 적는게 올바른 표기법이다.
             //th1를 sleep하고자 한다면 th1의 run()에서 적어준다.
         }catch (InterruptedException e){}
