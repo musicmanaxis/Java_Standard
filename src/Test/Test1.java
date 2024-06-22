@@ -17,7 +17,7 @@ public class Test1 extends B{
         t1.A_method();  //A클래스 메서드
         System.out.println(t1);  //B클래스 toString()사용
 
-         System.out.println(new Test1().s);
+         System.out.println("new Test1().s->"+new Test1().s);
 
          t1.B_method();
         // System.out.println(new Test1().s);
