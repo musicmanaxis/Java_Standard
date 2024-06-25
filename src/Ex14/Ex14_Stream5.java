@@ -34,5 +34,8 @@ public class Ex14_Stream5 {
                 .sorted()
                 .forEach(System.out::println);
 
+        //line(String을) ->line.split(" +") :String[](문자열 배열로 변환)
+        //" +" ->정규식:하나 이상의 공백  cf)" ":공백하나를 의미
+
     }
 }
