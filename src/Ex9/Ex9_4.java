@@ -2,7 +2,9 @@ package Ex9;
  //equals()를 오버라이딩하면 hashCode()도 오버라이딩 해줘야 한다.
 //위의 두메서드는 객체의 주소값을 이용하는데, equals()에서 객체의 변수값을 이용하며 두 객체가 갔다고 표현했다면
 // 주소값을 이용하는 hashCode()도 같다고 표현해야 말이 맞다..그리고 이런2가지 오버라이딩을 해줘야 하는것은  규칙이다..
-//hashCode()는 객체의 주소값을 int로  반환한다.  
+//hashCode()는 객체의 주소값을 int로  반환한다.
+//hash 알고리즘을 이용하는 클래스(hashMap, hashset 등은)는 equals()와 hashCode()를 오버라이딩 해줘야 올바르게 사용되어진다.
+//hashset과 같이 중복을 허용하지 않은 데이터를 추가하는 성능을 내려면 위의 두 메서드를 오버라이딩 해줘야 한다.
 
 
 import java.util.Objects;
