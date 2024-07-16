@@ -4,7 +4,7 @@ package Ex14;
 //람다식을 쓰는 이유는 메서드를 사용하기 위해서는 클래스와 객체를 이용해서 메서드를 사용할수 있는데
 //람다식은 람다식을 위한 하나의 추상메서드만 가지고 있는 인터페이스를 정의하여 객체없이 메서드 처럼 사용가능하다.
 
-//@FunctionalInterface:람다식을 위한 인터페이스라고 알려주고 컴파일러에게 체크요쳥
+//@FunctionalInterface:람다식을 위한 인터페이스라고 알려주고 컴파일러에게 체크요쳥..
 @FunctionalInterface
 interface MyFunction{
     void run();       //람다식을 위한 인터페이스는 메서드가 한개만 가능
