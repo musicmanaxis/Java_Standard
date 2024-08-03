@@ -31,10 +31,26 @@ public class RamdaTest {
 
         Supplier<MyClass> s2=MyClass::new;
         System.out.println("메서드 참조로 "+ s2.get());
+
+        //매개변수가 있는 객체생성
+        Function<Integer, MyClass> s3=MyClass::new;
+        System.out.println("매개변수 객체성성의 변수값:"+s3.apply(100).a);
+
+        //배열을 사용할 때 Function을 이용해야 한다..입력을 해서 크기를 지정해주기 때문에..
+        Function<Integer, int[]> f2=int[]::new;   //많이 쓰임
+        System.out.println("배열을 이용한 배열의 크기:"+f2.apply(10).length);
     }
 }
 
 class MyClass{
+    int a=0;
+    MyClass(){
+
+    }
+
+    MyClass(int a){
+        this.a=a;
+    }
 
     public String toString(){
         return "MyClass 객체 생성 완료";
