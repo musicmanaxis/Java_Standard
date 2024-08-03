@@ -11,7 +11,7 @@ public class Ex14_4 {
         for (int i=0; i<=9; i++)
             list.add(i);
 
-        list.forEach(c->System.out.print(c+","));
+        list.forEach(c->System.out.print(c+","));   //list에 있는 것을 출력하는 방법
         //lterable 인터페이스 void forEach(Consumer<T> action) 메서드 이용
         //인자가 하나들어가서 반환값이 없는 출력만 한다..출력은 Consumer<T> 반환에 해당하지 않음...
         //lterable의 while구문을 이용해 hasNext(), nextLine()사용없이 간단히 출력
@@ -35,6 +35,6 @@ public class Ex14_4 {
         map.put("3", "33");
         map.put("4", "44");
 
-        map.forEach((a,b)->System.out.print("key:"+a+"->value:"+b+", "));
+        map.forEach((a,b)->System.out.print("key:"+a+"->value:"+b+", "));  //map에 들어있는 것을 출력하는 방법
     }
 }
