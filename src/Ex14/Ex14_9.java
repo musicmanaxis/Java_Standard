@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 //스트림의 중간연산
 //map()->스트림의 요소변환, 예)파일스트림에서 스트링 스트림으로 변환
 // //peak()는 중간연산->forEach(), flatMap()->map이랑 비슷
-public class Ex14_Stream4 {
+public class Ex14_9 {
 
     public static void main(String[] args) {
         File[] files={new File("Ex1.java"), new File("Ex1.bak"), new File("Ex1"),
