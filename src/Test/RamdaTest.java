@@ -19,7 +19,7 @@ public class RamdaTest {
         System.out.println(preTest1.test(s));
 
 
-        Function<String, Integer> f=(a)->Integer.parseInt(a);
+        Function<String, Integer> f=(a)->Integer.parseInt(a);  //문자열을 숫자로 변환
         System.out.println(f.apply("200")+100);
 
         //메서드 참조:람다식을 더 간단히 하는 방법  클래스이름::메서드 이름

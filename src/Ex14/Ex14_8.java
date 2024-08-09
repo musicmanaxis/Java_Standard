@@ -1,8 +1,7 @@
 package Ex14;
 
-//스트림의 중간연산핵심:map, flatMap
-//스트림의 최종연산핵심:reduce, collect
-//강의 165 06:50 책필기, 강의 166 06:10, 11:30 책필기
+/*스트림에서 정렬을 사용하는 방법
+Comparator.comparing(), .thenComparing() 사용법*/
 
 import java.util.Comparator;
 import java.util.stream.Stream;
@@ -21,7 +20,7 @@ public class Ex14_8 {
         );
 
         studentStream.sorted(Comparator.comparing((Student s)->s.getBan())//반별졍렬  (Student s)->s.getBan() == (Student::getBan)
-                .thenComparing(Comparator.naturalOrder()))//기본졍렬로 정렬조건을 추가한 메서드 사용
+                .thenComparing(Comparator.naturalOrder()))//기본졍렬로 정렬조건을 추가한 메서드 사용, sorted()안에 comparing(), thenComparing()이 있음
                 .forEach(System.out::println);
 
         //Comparator.comparing()을 써서 정렬인터페이스를 매개변수로 넣는다...
