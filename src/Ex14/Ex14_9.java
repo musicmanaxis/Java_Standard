@@ -12,7 +12,7 @@ public class Ex14_9 {
                         new File("Ex2.java"), new File("Ex1.txt")
                     };
 
-        System.out.println("getName()용도를 알아보자..파일이름 출력==========");
+        System.out.println("getName()용도를 알아보자==========");
         for(int i=0; i< files.length; i++){
             System.out.print(files[i].getName()+", ");   //File클래스의 getName()용도를 알고 싶어서 작성함
         }
@@ -40,9 +40,9 @@ public class Ex14_9 {
                   .filter(s->s.indexOf('.')!= -1)  //확장자가 없는 것은 제외, indexOf('.')!= -1의 의미->'.'이 있다면..이후 코드 수행
                  //indexOf('.') 지정한 문자가 문자열에 몇번째에 있는지를 인덱스 위치(int)를 리턴한다.
                   //indexOf('.') -> -1이 반환된다면 .이 없다는 것을 의미한다...없으면 -1을 반환
-                 .peek(s->System.out.printf("peek를 이용해 중간확인으로 파일이름추출=%s%n", s))  //peek:중간에 작업이 잘 되는지 확인용도로 쓰임
+                 .peek(s->System.out.printf("peek 이용, 파일이름추출=%s%n", s))  //peek:중간에 작업이 잘 되는지 확인용도로 쓰임
                  .map(s->s.substring(s.indexOf('.')+1))//확장자만 추출, substring(숫자)startIndex부터 끝까지의 문자열을 리턴
-                 .peek(s->System.out.printf("peek를 이용해 중간확인으로 확장자만추출=%s%n", s))
+                 .peek(s->System.out.printf("peek 이용, 확장자만추출=%s%n", s))
                  .map(String::toUpperCase)
                  .distinct()
                  .forEach(System.out::println);
