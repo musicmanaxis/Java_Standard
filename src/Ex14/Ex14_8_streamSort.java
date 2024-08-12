@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.stream.Stream;
 
 
-public class Ex14_8 {
+public class Ex14_8_streamSort {
 
     public static void main(String[] args) {
         Stream<Student> studentStream=Stream.of(

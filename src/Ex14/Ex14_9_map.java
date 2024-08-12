@@ -5,7 +5,7 @@ import java.util.stream.Stream;
 // 스트림의 중간연산
 // map()->스트림에서 원하는 필드만 뽑아내거나 특수형태로 변환, 예)파일스트림에서 스트링 스트림으로 변환
 // peek()는 중간연산->forEach()출력과 비슷, flatMap()->map이랑 비슷
-public class Ex14_9 {
+public class Ex14_9_map {
 
     public static void main(String[] args) {
         File[] files={  new File("Ex1"), new File("Ex1.bak"), new File("Ex12.txt"),

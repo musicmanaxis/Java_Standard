@@ -10,7 +10,7 @@ interface MyFunction{
     void run();       //람다식을 위한 인터페이스는 메서드가 한개만 가능
 }
 
-public class Ex14_1 {
+public class Ex14_1_InterfaceForLamda{
 
     static void execute(MyFunction f){
         f.run();
