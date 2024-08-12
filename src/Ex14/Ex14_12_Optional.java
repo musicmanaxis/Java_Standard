@@ -30,11 +30,12 @@ public class Ex14_12_Optional {
         String a=optStr.get();  //optional객체를 꺼내본다.
         System.out.println("a의 내용:"+a+", 문자열 a의 길이:"+a.length());
 
-
-
         Optional<Integer> optInt=optStr.map(s->s.length());  //길이값을 숫자로 변환
         System.out.println("optStr.get()="+optStr.get());
         System.out.println("optInt.get()="+optInt.get());
+
+       /* Optional객체를 생성할 때는 of()보다 null을 담을수 있는 ofNullable()을 많이 사용하고
+                객체에서 꺼내올때는 get()보다 orElse()나 orElseGet(람다식)을 많이 사용한다.*/
 
         int result1=Optional.of("123")
                 .filter(x->x.length() >0)  //결과가 boolean값인데, 문자열 길이가 0보다 큰것이라면 통과시켜라 라는 의미
