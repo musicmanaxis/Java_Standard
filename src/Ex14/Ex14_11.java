@@ -1,10 +1,9 @@
 package Ex14;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-public class Ex14_Stream5 {
+public class Ex14_11 {
     public static void main(String[] args) {
 
         Stream<String[]> strArrStrm=Stream.of(

@@ -14,12 +14,13 @@ public class Ex14_Stream6 {
         System.out.println("arr.length="+arr.length);
 
         //Optional<String> opt=null;  //가능하지만 바람직하지 않다.
-        Optional<String> opt=Optional.empty();
+        Optional<String> opt=Optional.empty();  //optional은 이런식으로 초기화한다.
         System.out.println("opt="+opt);
 
         String str="";
 
-        str=opt.get();
+        str=opt.orElse("비어 있습니다");  //orElse("")안의 내용이 반환된다.
+        System.out.println(str);
 
     }
 }
