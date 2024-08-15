@@ -42,13 +42,14 @@ public class Ex14_13_reduce {
         IntStream intStream4=Stream.of(strArr).mapToInt(String::length);
         //mapToInt  -> Stream<T>을 IntStream(기본형 스트림)으로 변환, 요소를 기본형으로 다룸
 
+
         int count=intStream1.reduce(0, (a,b)->a+1);  //단어의 갯수가 몇개?
-        //reduce(초기값, 수행방법)
+        //reduce(초기값, 수행식)
         int sum=intStream2.reduce(0, (a,b)->a+b);  //단어들의 길이 합계
         System.out.println("count="+count);
         System.out.println("sum="+sum);
 
-        OptionalInt max=intStream3.reduce(Integer::max);
+        OptionalInt max=intStream3.reduce((a,b)->Integer.max(a,b));
         OptionalInt min=intStream4.reduce(Integer::min);
 
         //reduce(수행식만)  ->초기값이 없는 수행식만 있는 경우 반환타입은 Null을 고려하여 Optional객체 타입이다.
