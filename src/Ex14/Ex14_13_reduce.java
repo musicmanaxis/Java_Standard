@@ -1,5 +1,7 @@
 /*
 스트림의 최종연산 reduce():스트림의 요소를 하나씩 줄여나가면서 누적연산을 수행하고 최종결과를 반환한다.
+reduce(초기값, 수행식)처럼 초기값이 있으면 <T>으로 반환하고,
+reduce(수행식)처럼  초기값이 없으면 반환되는 것이 null일수 있으므로 Optional<T>으로 반환한다.
 * */
 
 package Ex14;
@@ -25,18 +27,20 @@ public class Ex14_13_reduce {
                         .noneMatch(s -> s.length()==0);  //문자열 길이가 0인것이 하나도 없는지?
                         //noneMatch(predicate)은 boolean 타입을 반환한다.
         Optional<String> sWord=Stream.of(strArr)
-                        .filter(s->s.charAt(0)=='s').findFirst(); //'s'로 시작하는 단어 첫번째 가져오기
+                        .filter(s->s.charAt(0)=='s') //'s'로 시작하는 단어 첫번째 가져오기  filter()는 스트림을 반환하는 중간연산
+                        .findFirst();
                         //findFirst()는 Optional<T>을 반환하는 메서드..Null도 반환할수 있기 때문에
 
         System.out.println("noEmotyStr="+noEmotyStr);
         System.out.println("sWord="+sWord.get());
 
         Stream<Integer> intStream=Stream.of(strArr).map(String::length);  //요소를 객체로 다룸
-        //Stream<String>을 IntStream으로 변환, 요소를 기본형으로 다룸
-        IntStream intStream1=Stream.of(strArr).mapToInt(String::length);
+        //아래와 차이점
+        IntStream intStream1=Stream.of(strArr).mapToInt(s->s.length());
         IntStream intStream2=Stream.of(strArr).mapToInt(String::length);
         IntStream intStream3=Stream.of(strArr).mapToInt(String::length);
         IntStream intStream4=Stream.of(strArr).mapToInt(String::length);
+        //mapToInt  -> Stream<T>을 IntStream(기본형 스트림)으로 변환, 요소를 기본형으로 다룸
 
         int count=intStream1.reduce(0, (a,b)->a+1);  //단어의 갯수가 몇개?
         //reduce(초기값, 수행방법)
