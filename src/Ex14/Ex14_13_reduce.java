@@ -46,7 +46,7 @@ public class Ex14_13_reduce {
 
 
         int count=intStream1.reduce(0, (a,b)->a+1);  //단어의 갯수가 몇개?
-        //reduce(초기값, 수행식)
+        //reduce(초기값, 수행식)형식의 반환값은 <T>으로 반환한다.
         int sum=intStream2.reduce(0, (a,b)->a+b);  //단어들의 길이 합계
         System.out.println("count="+count);
         System.out.println("sum="+sum);
@@ -55,7 +55,7 @@ public class Ex14_13_reduce {
         OptionalInt min=intStream4.reduce(Integer::min);
 
         //reduce(수행식만)  ->초기값이 없는 수행식만 있는 경우 반환타입은 Null을 고려하여 Optional객체 타입이다.
-        System.out.println("max="+max.getAsInt());  //단어들 중에 제일 길이가 긴거
+        System.out.println("max="+max.getAsInt());  //단어들 중에 제일 길이가 긴거, OptionalInt값을 꺼내올때 사용
         System.out.println("min="+min.getAsInt());
 
         OptionalInt empty=IntStream.empty().reduce(Integer::max);
