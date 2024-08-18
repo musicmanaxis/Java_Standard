@@ -23,7 +23,9 @@ public class Ex14_13_reduce {
               //.forEach(System.out::println);
                 .forEachOrdered(System.out::println);  //스레드를 병렬처리한 것을 순서대로 출력할 때 사용
 
-        boolean noEmotyStr=Stream.of(strArr)
+
+
+        boolean noEmptyStr=Stream.of(strArr)
                         .noneMatch(s -> s.length()==0);  //문자열 길이가 0인것이 하나도 없는지?
                         //noneMatch(predicate)은 boolean 타입을 반환한다.
         Optional<String> sWord=Stream.of(strArr)
@@ -31,7 +33,7 @@ public class Ex14_13_reduce {
                         .findFirst();
                         //findFirst()는 Optional<T>을 반환하는 메서드..Null도 반환할수 있기 때문에
 
-        System.out.println("noEmotyStr="+noEmotyStr);
+        System.out.println("noEmptyStr="+noEmptyStr);
         System.out.println("sWord="+sWord.get());
 
         Stream<Integer> intStream=Stream.of(strArr).map(String::length);  //요소를 객체로 다룸
