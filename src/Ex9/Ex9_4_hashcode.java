@@ -44,7 +44,7 @@ class Card{
 
 
 
-public class Ex9_4 {
+public class Ex9_4_hashcode {
 
 	public static void main(String[] args) {
 		

@@ -7,7 +7,7 @@ package Ex9;
 //나머지 클래스들은 오버라이딩 되어 있음.
 
 
-class Ex9_1 {
+class Ex9_1_equals{
 
 	public static void main(String[] args) {
 		Value v1 = new Value(20);
