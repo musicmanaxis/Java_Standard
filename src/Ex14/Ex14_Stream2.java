@@ -1,10 +1,7 @@
 package Ex14;
-
-
 import java.util.Random;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
-
 
 public class Ex14_Stream2 {
     public static void main(String[] args) {
@@ -17,7 +14,6 @@ public class Ex14_Stream2 {
         IntStream intStream1=new Random().ints(10, 5, 10); //난수를 발생시키는 무한스트림 생성
          //10은 10개로  5~9까지 지정
         intStream1.forEach(System.out::println);
-
 
         //람다식을 소스로 무한 스트림 만들기
         //iterate()는 초기값과 이전 요소를 seed로 해서 다음 요소를 계산한다.

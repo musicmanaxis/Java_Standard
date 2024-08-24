@@ -17,10 +17,7 @@ public class Ex14_9_map {
             System.out.print(files[i].getName()+", ");   //File클래스의 getName()용도를 알고 싶어서 작성함
         }
 
-
-
         Stream<File> fileStream=Stream.of(files);
-
         //매서드 참조표현
         //Stream<String> fileNameStream=fileStream.map(File::getName);
         Stream<String> fileNameStream=fileStream.map((f)->f.getName());  //map(람다식)
