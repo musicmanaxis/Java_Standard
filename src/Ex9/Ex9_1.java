@@ -8,30 +8,25 @@ package Ex9;
 
 
 class Ex9_1_equals{
-
 	public static void main(String[] args) {
 		Value v1 = new Value(20);
 		Value v2 = new Value(20);
 
-		if(v2.equals(v2)) {
+		if(v1.equals(v2)) {
 			System.out.println("Same Value");
 		}else {
 			System.out.println("Not Same Value");
 		}
-	
-	
 	}
 }
 
-
 class Value{
-	
 	int value;
 	
 	Value(int value){
 		this.value=value;
 	}
-	
+	@Override
 	public boolean equals(Object obj) {   //오버라이딩 했다.
 		//객체의 변수를 이용하여 오버라이딩 하면된다.
 		if(!(obj instanceof Value)) return false;  //Object가 Value 객체인지 사전검사  

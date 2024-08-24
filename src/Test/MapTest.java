@@ -15,6 +15,8 @@ public class MapTest {
         //entrySet()의 반환타입이 Set<Map.Entry<K, V>>이다..
         s1.forEach(s->System.out.println(s.getKey()+", "+s.getValue()));
 
+        //모든 Collection에 forEach()메서드가 있다.
+
 
         map.entrySet().forEach(s->System.out.println(s.getKey()+"= "+s.getValue()));
 

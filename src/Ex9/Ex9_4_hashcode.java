@@ -40,12 +40,7 @@ class Card{
 	}
 }
 
-
-
-
-
 public class Ex9_4_hashcode {
-
 	public static void main(String[] args) {
 		
 		Card c1=new Card();
