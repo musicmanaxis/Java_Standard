@@ -1,6 +1,11 @@
 package Java_UpGrade;
 
-import javax.xml.soap.SOAPPart;
+/*
+빌더패턴1:생성자의 매개변수가 많을 경우 빌더패턴을 이용하여
+        사용자가 원하는데로 생성자타입을 생성할 수 있다.
+        생성자매개변수가 하나혹은 그 이상의 것을 입맛데로 생성할 수 있음..
+*/
+
 
 public class Java_Bulder_Pattern1 {
     public static void main(String[] args) {
@@ -9,7 +14,7 @@ public class Java_Bulder_Pattern1 {
         Car1 car2=new CarBuilder1()
                 .setEngine("V4")
                 .setColor("blue")
-                .build();
+                .build();       //이런식으로 조절할 수 있다.
 
         System.out.println(car1);
         System.out.println(car2);
