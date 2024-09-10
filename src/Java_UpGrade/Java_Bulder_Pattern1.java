@@ -18,6 +18,7 @@ public class Java_Bulder_Pattern1 {
 
         System.out.println(car1);
         System.out.println(car2);
+        System.out.println(new CarBuilder1().build());
     }
 
 
@@ -59,9 +60,9 @@ class CarBuilder1{
     private boolean carmeraSense;
     private boolean ABS;
 
-    public CarBuilder1 setEngine(String engine) {  //set계열 메서드이지만 반환타입이 클래스 객체임을 주목
+    public CarBuilder1 setEngine(String engine) {  //**set계열 메서드이지만 반환타입이 클래스 객체임을 주목
         this.engine = engine;
-        return this;    //객체를 반환하여야 메서드 체이닝을 할 수 있다.
+        return this;    // **객체를 반환하여야 메서드 체이닝을 할 수 있다.
         // 메서드 체이닝:carbuilder1.setEngine(gear).setColer(blue).setABS(true) 이런식으로 메서드들을 연결하는것
     }
 
@@ -85,7 +86,7 @@ class CarBuilder1{
         return this;
     }
 
-    public Car1 build(){
+    public Car1 build(){  // **반환타입 주목
         return new Car1(engine, airbag, color, carmeraSense, ABS);
         //CarBuilder1의 필드값을 Car1의 생성자에 주입했다.
     }
