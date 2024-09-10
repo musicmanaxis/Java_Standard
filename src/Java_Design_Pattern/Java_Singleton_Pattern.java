@@ -18,7 +18,9 @@ public class Java_Singleton_Pattern {
 
 
  class Singleton{
-    private static  Singleton singletonSpeaker;  //  **여기 주목...
+    private static  Singleton singletonSpeaker;
+    //  **여기 주목..static을 사용하여 메모리에 한 번만 할당 되게 설정된다
+
     private int volume;
     private Singleton(){
         volume=3;
