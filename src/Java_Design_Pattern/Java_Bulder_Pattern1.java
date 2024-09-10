@@ -6,7 +6,6 @@ package Java_Design_Pattern;
         생성자매개변수가 하나혹은 그 이상의 것을 입맛데로 생성할 수 있음..
 */
 
-
 public class Java_Bulder_Pattern1 {
     public static void main(String[] args) {
         Car1 car1=new Car1("V6", true, "red", false, true );
@@ -20,10 +19,7 @@ public class Java_Bulder_Pattern1 {
         System.out.println(car2);
         System.out.println(new CarBuilder1().build());
     }
-
-
 }
-
 
 class Car1{
     private String engine;
@@ -50,7 +46,6 @@ class Car1{
                 ", ABS=" + ABS +
                 '}';
     }
-
 }
 
 class CarBuilder1{
@@ -90,6 +85,4 @@ class CarBuilder1{
         return new Car1(engine, airbag, color, carmeraSense, ABS);
         //CarBuilder1의 필드값을 Car1의 생성자에 주입했다.
     }
-
-
 }
