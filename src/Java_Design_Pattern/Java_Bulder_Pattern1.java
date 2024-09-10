@@ -1,4 +1,4 @@
-package Java_UpGrade;
+package Java_Design_Pattern;
 
 /*
 빌더패턴1:생성자의 매개변수가 많을 경우 빌더패턴을 이용하여

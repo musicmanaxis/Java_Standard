@@ -1,4 +1,4 @@
-package Java_UpGrade;
+package Java_Design_Pattern;
 
 //싱글톤:하나의 객체만 생성해서 사용할 경우
 //예)크롬탭에 한 아이디로 로그인하면 여러탭을 띄워도 동일아이디 정보가 남아있게 작동시킬 경우에 해당
