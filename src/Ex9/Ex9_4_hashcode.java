@@ -21,22 +21,25 @@ class Card{
 		this.kind=kind;
 		this.num=num;
 	}
-	
-	public String toString() {   // toString()은 객체의 변수를 이용해서 표현하여 오버라이딩 하면된다.  
+
+	@Override
+	public String toString() {   // toString()은 객체의 변수를 이용해서 표현하여 오버라이딩 하면된다.
 		return "kind:"+this.kind+", num:"+this.num;
-	} //toString()을 오버라이딩하지 않고 쓰면 객체의 클래스이름@객체주소 등과 같이 표현되서 쓸모있게 쓸라고..오버라이딩 
-	
-	public int hashCode() {   //equals()를 오버라이딩하면 hashCode()해줘야 한다..규칙임  
-		return Objects.hash(kind, num);  //hash()안의 매개변수를 가변인자다..정해진 갯수가 없다..맘데로 
+	} //toString()을 오버라이딩하지 않고 쓰면 객체의 클래스이름@객체주소 등과 같이 표현되서 쓸모있게 쓸라고..오버라이딩
+
+	@Override
+	public int hashCode() {   //equals()를 오버라이딩하면 hashCode()해줘야 한다..규칙임
+		return Objects.hash(kind, num);  //hash()안의 매개변수를 가변인자다..정해진 갯수가 없다..맘데로
 	}
-	
+
+	@Override
 	public boolean equals(Object obj) {
 		if(!(obj instanceof Card)) return false;
-		
+
 		Card c=(Card)obj;
-		
+
 		return this.kind.equals(c.kind) && this.num==c.num;
-		
+
 	}
 }
 
