@@ -74,6 +74,6 @@ class Tiger{
     }
 
     public void roar(){
-        System.out.println(" Tiger roar");
+        System.out.println("Tiger Roar");
     }
 }
