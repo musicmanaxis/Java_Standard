@@ -62,7 +62,7 @@ class AdapterTiger extends Animal{
     }
 }
 
-class Tiger{
+class Tiger{   //여기에선 생성자를 따로 정의하지 않았다.
     private String name;
 
     public String getName(){
