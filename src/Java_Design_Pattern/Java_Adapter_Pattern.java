@@ -51,8 +51,8 @@ class AdapterTiger extends Animal{
 
     AdapterTiger(String name) {
         super(name);         //AdapterTiger객체 생성과 동시에 Tiger객체 생성
-        tiger = new Tiger(); //위의 것과 순서주의
-        tiger.setName(name);
+        tiger = new Tiger(name); //super(name)뒤에 생성
+          tiger.setName(name);
 
     }
     @Override
@@ -64,6 +64,9 @@ class AdapterTiger extends Animal{
 
 class Tiger{   //여기에선 생성자를 따로 정의하지 않았다.
     private String name;
+    Tiger(String name){
+        this.name=name;
+    }
 
     public String getName(){
         return name;
