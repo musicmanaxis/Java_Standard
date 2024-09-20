@@ -62,7 +62,7 @@ class AdapterTiger extends Animal{
     }
 }
 
-class Tiger{   //여기에선 생성자를 따로 정의하지 않았다.
+class Tiger{
     private String name;
     Tiger(String name){
         this.name=name;
