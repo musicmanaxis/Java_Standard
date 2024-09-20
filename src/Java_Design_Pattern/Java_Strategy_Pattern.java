@@ -23,7 +23,6 @@ class SumPrinter{
 }
 
 class SimpleSumStrategy implements SumStrategy{
-
     @Override
     public int get(int N) {
         int sum=N;
@@ -34,8 +33,8 @@ class SimpleSumStrategy implements SumStrategy{
         return sum;
     }
 }
-class GaussSumStrategy implements SumStrategy{
 
+class GaussSumStrategy implements SumStrategy{
     @Override
     public int get(int N) {
         return  (N+1)*N/2;
