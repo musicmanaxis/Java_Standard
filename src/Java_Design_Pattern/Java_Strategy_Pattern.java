@@ -11,9 +11,10 @@ public class Java_Strategy_Pattern {
 
 class SumPrinter{
     //오로지 인터페이스에서 메서드만 보고 값을 구하는 방식
+    //SimpleSumStrategy, GaussSumStrategy존재를 모르는 상태
   void print(SumStrategy sumStrategy, int N){
       System.out.printf("The Sum of 1 - %d:", N);
-      System.out.println(sumStrategy.get(N));
+      System.out.println(sumStrategy.get(N));  //인터페이스 메서드만 이용한다.->코드를 변경할 필요가 없다.
   }
 }
 
